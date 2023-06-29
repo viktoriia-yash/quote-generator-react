@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [quote, setQuote] = useState("Hi");
-  const [author, setAuthor] = useState("Hello");
+  const [quote, setQuote] = useState(
+    "This book was written using 100% recycled words."
+  );
+  const [author, setAuthor] = useState("Terry Pratchett");
 
   useEffect(() => {
     fetch("http://api.quotable.io/random")
