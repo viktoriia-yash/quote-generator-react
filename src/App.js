@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 function App() {
   const [quote, setQuote] = useState(
@@ -8,7 +7,7 @@ function App() {
   const [author, setAuthor] = useState("Terry Pratchett");
 
   useEffect(() => {
-    fetch("http://api.quotable.io/random")
+    fetch("https://api.quotable.io/random")
       .then((res) => res.json())
       .then((quote) => {
         setQuote(quote.content);
@@ -17,7 +16,7 @@ function App() {
   }, []);
 
   let fetchNewQuote = () => {
-    fetch("http://api.quotable.io/random")
+    fetch("https://api.quotable.io/random")
       .then((res) => res.json())
       .then((quote) => {
         setQuote(quote.content);
