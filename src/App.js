@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import axios from "axios";
 
 function App() {
@@ -27,14 +26,35 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <div className="quotation-mark-container">
+          <p className="quotation-mark">&#8220;</p>
+        </div>
         <div className="advice-quote">
           <h2>{quote}</h2>
+        </div>
+        <div className="quote-author">
           <div>{author}</div>
         </div>
         <div className="btn-container">
-          <button onClick={fetchNewQuote}>I need advice</button>
+          <button className="btn" onClick={fetchNewQuote}>
+            New Quote
+          </button>
+        </div>
+        <div className="quotation-mark-container">
+          <p className="quotation-mark">&#8221;</p>
         </div>
       </div>
+      <p className="credit">
+        <a
+          href="https://github.com/viktoriia-yash/quote-generator-react"
+          className="github"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Open-source code
+        </a>{" "}
+        by Viktoriia Yashkina
+      </p>
     </div>
   );
 }
